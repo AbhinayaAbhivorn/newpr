@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'update.css' %}">
+    <title>Update Student</title>
+</head>
+<body>
+ 
+<h2>Update Student</h2>
+ 
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" value="{{ student.name }}"><br><br>
+    <input type="number" name="no" value="{{ student.no }}"><br><br>
+ 
+    {% if student.image %}
+        <img src="{{ student.image.url }}" height="100"><br><br>
+    {% endif %}
+ 
+    <input type="file" name="image"><br><br>
+ 
+    <button type="submit">Update</button>
+</form>
+ 
+</body>
+</html>

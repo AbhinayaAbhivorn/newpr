@@ -1,0 +1,121 @@
+/* read.css */
+
+/* Reset default styles */
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background and layout */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #333;
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main heading */
+h1 {
+    color: #1e3c72;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Student list container */
+ul {
+    list-style: none;
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 25px 30px;
+}
+
+/* Each student entry */
+li {
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 15px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #333;
+}
+
+li:last-of-type {
+    border-bottom: none;
+}
+
+/* Image styling */
+img {
+    display: block;
+    margin: 10px 0 15px 0;
+    border-radius: 8px;
+    border: 2px solid #1e90ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 200px;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Links (Edit/Delete buttons) */
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #1e90ff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a:hover {
+    background-color: #187bcd;
+    transform: scale(1.05);
+}
+
+a:active {
+    transform: scale(0.95);
+}
+
+/* Edit button (blue) */
+a[href*="update_student"] {
+    background-color: #28a745;
+}
+
+a[href*="update_student"]:hover {
+    background-color: #218838;
+}
+
+/* Delete button (red) */
+a[href*="delete_student"] {
+    background-color: #dc3545;
+}
+
+a[href*="delete_student"]:hover {
+    background-color: #c82333;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    ul {
+        padding: 20px;
+    }
+    li {
+        font-size: 1em;
+    }
+    a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+}

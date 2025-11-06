@@ -1,0 +1,26 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'create.css' %}">
+    <title>Add Student</title>
+</head>
+<body>
+ 
+<h2>Add Student</h2>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Name:</label>
+    <input type="text" name="name"><br><br>
+ 
+    <label>Number:</label>
+    <input type="number" name="no"><br><br>
+ 
+    <label>Image:</label>
+    <input type="file" name="image"><br><br>
+ 
+    <button type="submit">Save</button>
+</form>
+ 
+</body>
+</html>
