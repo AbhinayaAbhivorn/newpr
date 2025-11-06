@@ -4,13 +4,10 @@ from django.shortcuts import render,redirect,get_object_or_404
 # Create your views here.
 from django.http import HttpResponse
 def index(request):
-    return HttpResponse("this is my first project")
+    return HttpResponse("iam sharing my project")
 
 from .models import Student
 
-
-def index(request):
-    return HttpResponse("this is my first project")
 
 #read
 def read(request):
